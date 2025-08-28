@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  background-color: darkslategrey;
+
+  height: 100vh;
+  width: 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  transition: color 250ms ease-in-out;
+}
+
+a:is(:hover) {
+  color: orange;
+}
+
+nav:is(:has(a:hover)) a:is(:not(:hover)) {
+  color: grey;
+}
